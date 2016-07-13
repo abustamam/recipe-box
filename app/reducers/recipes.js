@@ -1,7 +1,7 @@
 import { List, Map } from 'immutable'
 
-const initialRecipes = List([
-  Map({
+const initialRecipes = Map({
+  0: Map({
     id: 0,
     title: 'Pumpkin Pie',
     ingredients: List.of(
@@ -12,7 +12,7 @@ const initialRecipes = List([
       'Pie Crust'
     )
   })
-])
+})
 
 const recipe = (state, action) => {
   switch (action.type) {
@@ -22,9 +22,6 @@ const recipe = (state, action) => {
       title: action.title,
       ingredients: action.ingredients
     })
-  case 'OPEN_RECIPE':
-    console.log(state)
-    return state
   default:
     return state
   }
@@ -33,7 +30,7 @@ const recipe = (state, action) => {
 const recipes = (state = initialRecipes, action) => {
   switch (action.type) {
   case 'ADD_RECIPE':
-    return state.push(recipe(null, action))
+    return state.update(action.id, recipe(null, action))
   default:
     return state
   }

@@ -3,7 +3,8 @@ import Recipe from './Recipe'
 
 const RecipeList = ({ recipes, onRecipeClick }) => {
   // console.log(recipes)
-  return (<ul>
+  return (<div className="recipe recipe-list">
+    <div className="recipe-header">Recipes</div>
     {recipes.map(recipe => <Recipe
         key={recipe.get('id')}
         ingredients={recipe.get('ingredients')}
@@ -11,7 +12,7 @@ const RecipeList = ({ recipes, onRecipeClick }) => {
         onClick={() => onRecipeClick(recipe.get('id'))}
       />
     )}
-  </ul>)
+  </div>)
 }
 
 RecipeList.propTypes = {

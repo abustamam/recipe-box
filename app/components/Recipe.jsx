@@ -1,11 +1,11 @@
 import React, { PropTypes } from 'react'
 
 const Recipe = ({ onClick, title, ingredients }) => {
-  return (<li
+  return (<div
     onClick={onClick}
   >
     {title}
-  </li>
+  </div>
 )}
 
 Recipe.propTypes = {
