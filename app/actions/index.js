@@ -1,23 +1,17 @@
 import uuid from 'node-uuid'
 
-export const addTodo = text => {
+export const addRecipe = ({ title, ingredients }) => {
   return {
-    type: 'ADD_TODO',
+    type: 'ADD_RECIPE',
     id: uuid.v4(),
-    text
+    title,
+    ingredients
   }
 }
 
-export const setVisibilityFilter = filter => {
+export const openRecipe = id => {
   return {
-    type: 'SET_VISIBILITY_FILTER',
-    filter
-  }
-}
-
-export const toggleTodo = id => {
-  return {
-    type: 'TOGGLE_TODO',
+    type: 'OPEN_RECIPE',
     id
   }
 }
