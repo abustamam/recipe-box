@@ -11,6 +11,15 @@ const initialRecipes = Map({
       'Pumpkin Pie Spice',
       'Pie Crust'
     )
+  }),
+  1: Map({
+    id: 1,
+    title: 'Spaghetti',
+    ingredients: List.of(
+      'Noodles',
+      'Tomato Sauce',
+      '(Optional) Meatballs'
+    )
   })
 })
 

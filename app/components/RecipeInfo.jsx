@@ -4,9 +4,11 @@ const RecipeInfo = ({ activeRecipe }) => {
   // console.log(recipes)
   return (<div className="recipe recipe-info">
     <div className="recipe-header">Ingredients</div>
-    {activeRecipe.get('ingredients').map(ingredient => {
-      return (<div key={ingredient}>{ingredient}</div>)
-    })}
+    <div>
+      {activeRecipe.get('ingredients').map(ingredient => {
+        return (<div key={ingredient}>{ingredient}</div>)
+      })}
+    </div>
   </div>)
 }
 

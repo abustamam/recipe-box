@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react'
 
 const Recipe = ({ onClick, title, ingredients }) => {
   return (<div
+    className="recipe-list-item"
     onClick={onClick}
   >
     {title}

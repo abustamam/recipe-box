@@ -5,13 +5,15 @@ const RecipeList = ({ recipes, onRecipeClick }) => {
   // console.log(recipes)
   return (<div className="recipe recipe-list">
     <div className="recipe-header">Recipes</div>
-    {recipes.map(recipe => <Recipe
-        key={recipe.get('id')}
-        ingredients={recipe.get('ingredients')}
-        title={recipe.get('title')}
-        onClick={() => onRecipeClick(recipe.get('id'))}
-      />
-    )}
+    <div>
+      {recipes.map(recipe => <Recipe
+          key={recipe.get('id')}
+          ingredients={recipe.get('ingredients')}
+          title={recipe.get('title')}
+          onClick={() => onRecipeClick(recipe.get('id'))}
+        />
+      )}
+    </div>
   </div>)
 }
 
