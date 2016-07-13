@@ -11,6 +11,7 @@ const Header = () => (
       Recipe Box
     </div>
     <div style={{ width: 280 }}></div>
+    <div></div>
   </header>
 )
 
