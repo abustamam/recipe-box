@@ -1,9 +1,11 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
+import ImmutablePropTypes from 'react-immutable-proptypes'
+import Icon from './Icon'
 
 const RecipeInfo = ({ activeRecipe }) => {
   // console.log(recipes)
   return (<div className="recipe recipe-info">
-    <div className="recipe-header">Ingredients</div>
+    <div className="recipe-header"><span>Ingredients for {activeRecipe.get('title')}</span><Icon type="edit"/></div>
     <div>
       {activeRecipe.get('ingredients').map(ingredient => {
         return (<div key={ingredient}>{ingredient}</div>)
@@ -13,7 +15,7 @@ const RecipeInfo = ({ activeRecipe }) => {
 }
 
 RecipeInfo.propTypes = {
-
+  activeRecipe: ImmutablePropTypes.map
 }
 
 export default RecipeInfo
